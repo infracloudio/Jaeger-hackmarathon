@@ -1,2 +1,2 @@
-# Jaeger-hackmarathon
-Jaeger implementation for dope-december hackathon
+# jaeger-trace-python
+Jaeger implementation for a Flask app in python
