@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jaeger-traer-app3
+  labels:
+    app: jaeger-traer-app3
+spec:
+  replicas: {{ .Values.app3.replicaCount }}
+  selector:
+    matchLabels:
+      app: jaeger-traer-app3
+  template:
+    metadata: 
+      labels:
+        app: jaeger-traer-app3
+    spec:
+     containers:
+     - image: {{ .Values.app3.image.repository }}:{{ .Values.app3.image.tag }}
+       name: jaeger-traer-app3
+       ports:
+       - containerPort: {{ .Values.app3.image.port }}
