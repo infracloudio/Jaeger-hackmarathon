@@ -99,6 +99,7 @@ spec:
    port: 5778
    protocol: TCP
    targetPort: 5778
+ clusterIP: None
  selector:
    jaeger-infra: jaeger-pod
 ---
