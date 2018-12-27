@@ -10,4 +10,4 @@ spec:
     port: {{ .Values.app2.image.port }}
     targetPort: {{ .Values.app2.image.targetPort }}
   selector:
-    app: app2
+    app: jaeger-tracer-app2

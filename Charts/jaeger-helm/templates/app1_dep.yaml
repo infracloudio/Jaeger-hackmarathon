@@ -19,3 +19,6 @@ spec:
        name: jaeger-tracer-app1
        ports:
        - containerPort: {{ .Values.app1.image.port }}
+       env: 
+       - name: JAEGER_AGENT_HOST
+         value: jaeger-agent.default.svc.cluster.local 
