@@ -4,4 +4,4 @@ Using Jaeger to trace flask & redis based microservices. The project is deployed
 1. For a locally set-up cluster, using helm inside Jaeger-hackmarathon/jaeger-trace/:
 helm install --name jaeger-trace --debug .
 
-2. Check if you are able to access first microservice at http://localhost:8081/home
+2. Check if you are able to access first microservice at http://localhost:8081/home?item=<any_item_name>
