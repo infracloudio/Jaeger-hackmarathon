@@ -35,3 +35,6 @@ redis:
     containerPort: 6379
     port: 6379
     targetPort: 6379
+
+enableJaegerAllInOne: false
+jaegerAgentHost: jgr-jaeger-agent.fission.svc.cluster.local # jaeger-agent.default.svc.cluster.local

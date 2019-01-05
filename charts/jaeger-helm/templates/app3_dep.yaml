@@ -21,4 +21,8 @@ spec:
        - containerPort: {{ .Values.app3.image.port }}
        env:
        - name: JAEGER_AGENT_HOST
-         value: jaeger-agent.default.svc.cluster.local
+         value: {{ .Values.jaegerAgentHost }}
+       - name: IP
+         value: app3-service.default.svc.cluster.local
+       - name: REDIS_HOST
+         value: redis-service.default.svc.cluster.local

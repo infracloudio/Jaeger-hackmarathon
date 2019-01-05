@@ -42,6 +42,7 @@ metadata:
     app: redis
     redis-infra: redis-service
 spec:
+  hostname: redis-host
   type: ClusterIP
   ports:
   - name: redis-service

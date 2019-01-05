@@ -16,9 +16,13 @@ spec:
     spec:
      containers:
      - image: {{ .Values.app2.image.repository }}:{{ .Values.app2.image.tag }}
-       name: jaeger-tracer-app2-image
+       name: jaeger-tracer-app2
        ports:
        - containerPort: {{ .Values.app2.image.port }}
        env:
        - name: JAEGER_AGENT_HOST
-         value: jaeger-agent.default.svc.cluster.local
+         value: {{ .Values.jaegerAgentHost }}
+       - name: IP
+         value: app3-service.default.svc.cluster.local
+       - name: REDIS_HOST
+         value: redis-service.default.svc.cluster.local
