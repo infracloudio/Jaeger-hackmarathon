@@ -18,7 +18,7 @@ spec:
      - image: {{ .Values.app1.image.repository }}:{{ .Values.app1.image.tag  }}
        name: jaeger-tracer-app1
        ports:
-       - containerPort: {{ .Values.app1.image.port }}
+       - containerPort: {{ .Values.app1.image.targetPort }}
        env: 
        - name: JAEGER_AGENT_HOST
          value: {{ .Values.jaegerAgentHost }}

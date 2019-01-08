@@ -19,6 +19,8 @@ spec:
       - image: {{ .Values.redis.image.repository }}:{{ .Values.redis.image.tag }}
         command:
           - "redis-server"
+        args:
+          - "--protected-mode no"  
         name: redis-container
         ports:
           - name: redis
@@ -50,4 +52,4 @@ spec:
     protocal: {{ .Values.redis.image.protocol }}
     targetPort: {{ .Values.redis.image.targetPort }}
   selector: 
-    redis-infra: redis-for-jaeger
+    app: redis-for-jaeger
